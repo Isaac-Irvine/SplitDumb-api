@@ -1,3 +1,9 @@
-from python:3.12.1-bookworm as base
+FROM python:3.12.1-bookworm AS base
 
-from base as devcontainer
+WORKDIR /app
+
+FROM base AS devcontainer
+
+COPY requirements.txt .
+
+RUN pip3 install -r requirements.txt
