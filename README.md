@@ -15,3 +15,6 @@ Steps to open:
 1. Open in VS code
 1. Go down to the bottom left of VS code and click on blue button called "Open a remote window"
 1. Click "Reopen in Container" (This might take a bit the first time you do it)
+=======
+We are trying to make our own app similar to Splitwise
+
