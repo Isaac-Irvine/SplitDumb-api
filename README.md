@@ -1,2 +1,2 @@
 # SplitDumb-api
-We are trying to make our own app simular to Splitwise
+We are trying to make our own app similar to Splitwise
