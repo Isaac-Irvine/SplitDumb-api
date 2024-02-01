@@ -1,5 +1,14 @@
 # SplitDumb-api
-We are trying to make our own app similar to Splitwise
+We are trying to make our own app similar to [Splitwise](https://www.splitwise.com/).
+Except its free and open source.
+We're calling it SplitDumb because it will likely be Dumber than SplitWise.
+This is the API for SplitDumb. Front ends will be in other repos. We'll link them here when they exist.
+We'd also like to have multiple front ends. Web, mobile and Discord bot.
+
+As a stretch goal, we'd like to add the ability to upload data from your bank account and provide insights into how your money is being spent.
+
+# Project Status
+Half of us learnt was Django was today. We've followed a quick start guide and setup a dev environment. Minimum viable product is still a distant goal.
 
 ## Opening the Dev Environment
 The dev environment runs in a [Docker Dev Container](https://code.visualstudio.com/docs/devcontainers/containers).
