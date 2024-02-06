@@ -1,29 +1,21 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 {
 	"name": "SplitDumb-api",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
 
-	"dockerFile": "../Dockerfile",
-	"context": "..",
-	"build": {
-		"target": "devcontainer"
-	},
-
-	"mounts": [
-		{
-			"source": "/var/run/docker.sock",
-			"target": "/var/run/docker.sock",
-			"type": "bind"
-		}
-	],
-    
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				"ms-python.python"
+				"ms-python.python",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
+
+	"forwardPorts": [8000, 5432],
 
 	"remoteUser": "user"
 }

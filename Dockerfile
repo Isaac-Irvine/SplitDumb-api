@@ -11,7 +11,10 @@ ARG USER_GID=$USER_UID
 # Install Apt packages
 RUN apt-get update \
     && apt-get install -y \
-           sudo
+           sudo \
+           postgresql-client
+# purge apt cache
+RUN rm -rf /var/lib/apt/lists/*
 
 # Create a dev user
 RUN groupadd --gid $USER_GID $USERNAME \
@@ -21,5 +24,5 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # Install Pip packages
 COPY requirements.txt requirements-dev.txt ./
-RUN pip3 install -r requirements.txt
-RUN pip3 install -r requirements-dev.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements-dev.txt
