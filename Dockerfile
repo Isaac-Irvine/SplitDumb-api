@@ -9,12 +9,14 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
 # Install Apt packages
-RUN apt-get update \
-    && apt-get install -y \
-           sudo \
-           postgresql-client
-# purge apt cache
-RUN rm -rf /var/lib/apt/lists/*
+RUN <<EOT
+    apt-get update
+    apt-get install -y \
+        sudo \
+        postgresql-client \
+        iputils-ping
+    rm -rf /var/lib/apt/lists/*
+EOT
 
 # Create a dev user
 RUN groupadd --gid $USER_GID $USERNAME \
